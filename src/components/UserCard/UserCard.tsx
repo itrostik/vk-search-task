@@ -1,12 +1,17 @@
-import "./style.css";
+import styles from './UserCard.module.scss';
+import { UserType } from '../../types/UserType.ts';
 
-export function UserCard(props) {
+type PropsType = {
+  user: UserType;
+};
+
+export function UserCard({ user }: PropsType) {
   return (
-    <div className="userCard">
-      <img className="userPic" src={props.image} />
-      <div className="userInfo">
-        <div>{`${props.firstName} ${props.lastName}`}</div>
-        <div>{props.address.city}</div>
+    <div className={styles.userCard}>
+      <img className={styles.userPic} src={user.image} alt={'user-picture'} />
+      <div className={styles.userInfo}>
+        <div>{`${user.firstName} ${user.lastName}`}</div>
+        <div>{user.address.city}</div>
       </div>
     </div>
   );

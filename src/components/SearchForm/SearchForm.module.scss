@@ -1,0 +1,62 @@
+.searchWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px 0 20px;
+}
+
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.searchInput {
+  padding: 10px 25px 10px 10px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+}
+
+.searchInput[type='text'] {
+  width: 300px;
+}
+
+.searchInput::placeholder {
+  font-size: 14px;
+  color: #9d9d9d;
+}
+
+.searchReset {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  &:hover {
+    .left,
+    .right {
+      background: #ff0000;
+    }
+  }
+}
+
+.left,
+.right {
+  width: 12px;
+  height: 2px;
+  background: #000;
+}
+
+.left {
+  position: absolute;
+  transform: rotate(50deg);
+}
+
+.right {
+  position: absolute;
+  transform: rotate(-50deg);
+}

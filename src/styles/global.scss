@@ -1,0 +1,30 @@
+@import '_reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+.wrapper {
+  max-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  padding: 0 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: azure;
+  border-radius: 20px;
+  border: 1px solid #000000;
+}
