@@ -1,0 +1,35 @@
+.wrapper {
+  background-color: azure;
+  padding: 20px;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 300px;
+  height: 122px;
+  column-gap: 24px;
+  align-items: center;
+  position: relative;
+}
+
+.skeleton {
+  position: absolute;
+  width: 50px;
+  top: 0;
+  left: 0;
+  height: 120px;
+  background-color: white;
+  border-radius: 10px;
+  animation: 0.5s translate infinite;
+}
+
+@keyframes translate {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 300px;
+  }
+}
