@@ -10,6 +10,8 @@ body {
   min-height: 100%;
 }
 
+//общая оболочка
+
 .wrapper {
   max-height: 100vh;
   height: 100vh;
@@ -17,6 +19,8 @@ body {
   flex-direction: column;
   gap: 10px;
 }
+
+//скроллбар
 
 *::-webkit-scrollbar {
   width: 5px;

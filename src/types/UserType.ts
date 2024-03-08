@@ -1,7 +1,9 @@
-import { AddressType } from "./AddressType.ts";
-import { BankType } from "./BankType.ts";
-import { CompanyType } from "./CompanyType.ts";
-import { CryptoType } from "./CryptoType.ts";
+import { AddressType } from './AddressType.ts';
+import { BankType } from './BankType.ts';
+import { CompanyType } from './CompanyType.ts';
+import { CryptoType } from './CryptoType.ts';
+
+//типизация user, получаемых с JSON
 
 export type UserType = {
   id: number;
@@ -25,13 +27,13 @@ export type UserType = {
   };
   domain: string;
   ip: string;
-  address: AddressType;
+  address: AddressType; //вынес в отдельный тип, потому что слишком большая вложенность получается
   macAddress: string;
   university: string;
-  bank: BankType;
-  company: CompanyType;
+  bank: BankType; //вынес в отдельный тип, потому что слишком большая вложенность получается
+  company: CompanyType; //вынес в отдельный тип, потому что слишком большая вложенность получается
   ein: string;
   ssn: string;
   userAgent: string;
-  crypto: CryptoType;
+  crypto: CryptoType; //вынес в отдельный тип, потому что слишком большая вложенность получается
 };

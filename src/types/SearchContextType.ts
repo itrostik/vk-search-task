@@ -1,6 +1,8 @@
 import { UserType } from './UserType.ts';
 import React from 'react';
 
+//типизация контекста SearchContext
+
 export type SearchContextType = {
   states: {
     users: UserType[];
