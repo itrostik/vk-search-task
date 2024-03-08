@@ -25,10 +25,8 @@ export function SearchForm() {
         const response = await fetch(
           `${import.meta.env.VITE_API_URL}?q=${currentValue}&limit=20`,
         ); //вынес URL API в .env файл, а limit=20 нужен для пагинации
-        //заносим текущую страницу пагинации в список посещённых
-        const addedPages = states.addedPaginationPages;
-        addedPages.push(states.currentPaginationPage);
-        setStates.setAddedPaginationPages([...addedPages]);
+        //заносим первую страницу пагинации в список посещённых
+        setStates.setAddedPaginationPages([1]);
 
         //если ответ сервера положительный, обновляем состояния всех пользователей и тех, что будут на текущей странице
         if (response.ok) {
